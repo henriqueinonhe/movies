@@ -12,8 +12,9 @@ export const renderHome = ({ movies }) => {
 
         <section class="movies_container">
           <ul class="movies_list">
-          ${movies.map(
-            ({ title, imageUrl, slug }) => `
+          ${movies
+            .map(
+              ({ title, imageUrl, slug }) => `
             <li class="movies_listItem">
               <a href="${slug}">
                 <div class="movies_listItemImageContainer">
@@ -27,7 +28,8 @@ export const renderHome = ({ movies }) => {
               </a>
             </li>
           `
-          )}
+            )
+            .join("")}
           </ul>
         </section>
       </div>

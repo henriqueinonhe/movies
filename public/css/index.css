@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  width: 192px;
 }
 
 .movies_listItemImageContainer {

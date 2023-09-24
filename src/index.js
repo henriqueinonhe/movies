@@ -2,7 +2,7 @@ import Fastify from "fastify";
 import staticMiddleware from "@fastify/static";
 import { resolve } from "node:path";
 import { renderHome } from "./templates/home.js";
-import { fetchMovies } from "./db.js";
+import { fetchMovies, fetchMovieBySlug } from "./db.js";
 import { renderMovie } from "./templates/movie.js";
 
 const fastify = Fastify({
@@ -25,11 +25,10 @@ fastify.get("/", async (req, res) => {
 fastify.get("/:slug", async (req, res) => {
   const { slug } = req.params;
 
-  const movies = await fetchMovies();
-  const selectedMovie = movies.find((movie) => movie.slug === slug);
+  const movie = await fetchMovieBySlug(slug);
 
   const html = renderMovie({
-    movie: selectedMovie,
+    movie,
   });
 
   res.headers({
