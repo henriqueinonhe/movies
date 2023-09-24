@@ -8,7 +8,7 @@ const fastify = Fastify({
 });
 
 fastify.get("/", async (req, res) => {
-  const index = await readFile("./public/index.html", "utf-8");
+  const index = await readFile("./public/pages/index/index.html", "utf-8");
   res.headers({
     "Content-Type": "text/html",
   });
