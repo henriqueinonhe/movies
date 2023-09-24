@@ -1,46 +1,3 @@
-.header_container {
-  position: fixed;
-  width: 100%;
-  z-index: var(--header-z-index);
-}
-
-.header_brand {
-  height: var(--header-brand-height);
-  background-image: linear-gradient(
-    to right,
-    rgb(50, 85, 226),
-    rgb(32, 35, 128)
-  );
-  display: flex;
-  align-items: center;
-  padding-left: 64px;
-  color: var(--title-text-color);
-}
-
-.header_strip {
-  background-color: rgb(32, 35, 128);
-  height: var(--header-strip-height);
-}
-
-.main_container {
-  padding-top: var(--header-height);
-  background-color: var(--background-color);
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.main_content {
-  max-width: 1420px;
-  width: 100%;
-}
-
-.main_title {
-  margin-top: 30px;
-  font-size: 30px;
-  color: var(--title-text-color);
-}
-
 .movies_container {
   margin-top: 40px;
 }
@@ -65,7 +22,6 @@
 }
 
 .movies_listItemImage {
-  background-color: pink;
   width: 100%;
   height: 100%;
   transition: transform 500ms;
