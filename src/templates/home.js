@@ -1,7 +1,7 @@
 import { renderBase } from "./base.js";
 
 export const renderHome = ({ movies }) => {
-  const stylesheets = ["/pages/index/index.css"];
+  const stylesheets = ["/css/index.css"];
 
   const scripts = [];
 
@@ -38,5 +38,6 @@ export const renderHome = ({ movies }) => {
     stylesheets,
     scripts,
     content,
+    title: "Filmes",
   });
 };
