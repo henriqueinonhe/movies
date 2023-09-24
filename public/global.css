@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  --title-text-color: white;
+  --background-color: rgb(51, 51, 51);
+  --text-color: #ccc;
+
+  /* Sizes */
+  --header-height: calc(
+    var(--header-brand-height) + var(--header-strip-height)
+  );
+  --header-brand-height: 64px;
+  --header-strip-height: 56px;
+
+  /* Z Indexes */
+  --header-z-index: 1000;
+}
